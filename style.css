@@ -1,5 +1,7 @@
 /* Common */
 
+@media only screen and (max-width:1920px) {
+
 body {
   background-image: url(https://i.pinimg.com/originals/42/48/48/4248488ae616711071e10656b179bced.jpg);
   background-color: #cccccc;
@@ -184,4 +186,32 @@ h1 {
 .cSpace {
   margin-left: 20px;
   margin-top: 10px;
+}
+
+}
+
+@media only screen and (max-width:420px) {
+
+  body {
+    background-image: url(https://i.pinimg.com/originals/42/48/48/4248488ae616711071e10656b179bced.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 844px;
+    max-width: 390px;
+    border: none;
+    display: block;
+  }
+
+  h1 {
+    position: relative;
+    font-size: 70px;
+    font-family: Condor;
+    text-align: center;
+  
+  }
+
+
+
+
 }
