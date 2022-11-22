@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grundfos Kollegiet</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; 
+        background-image: url(https://i.pinimg.com/originals/42/48/48/4248488ae616711071e10656b179bced.jpg);
+        background-color: #cccccc;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height:auto;
+        max-width:100%;
+        border:none;
+        display:block;
+}
+.vertical-menu {
+      width: 100px;
+      position: fixed;
+      align-self: center;
+
+    }
+
+    .vertical-menu a {
+      background-color: #F8F8F8;
+      color: black;
+      padding: 30px;
+      text-decoration: none;
+      float: right;
+      border-radius: 10px;
+    }
+
+
+    .vertical-menu a.active {
+      background-color: #ccc;
+      color: white;
+    }
+    .maptext {
+            text-align: center;
+            font-family: condor;
+            font-size: 60px;
+            margin-top: 0%;
+        }
+#map { position: absolute; 
+top: 15%;
+
+ left: 10%;
+ height: 650px;
+ width: 650px; }
+
+
+ * {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 30%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: 60%;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 60%;
+  margin-right: 10%;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+h3{
+    margin-left: 60%;
+    font-family: condor;
+}
+</style>
+</head>
+<body>
+<style>
+    #marker {
+        background-image: url('https://luminex.dk/wp-content/uploads/2018/09/Grundfos-kollegiet-Aarhus-Luminex-4.jpg');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .mapboxgl-popup {
+        max-width: 200px;
+    }
+
+    .dropbtn {
+    background-color: #F8F8F8;
+    color: #0000;
+    padding: 6px;
+    padding-right: 35px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+  }
+  
+  .dropdown {
+    position: relative; 
+    margin-top: 40px;
+    /* display: inline-block; */
+    margin-left: 90%;
+    /* margin-bottom: 100px; */
+    border-radius: 25px;
+  
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 81px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-left: 5px;
+    border-radius: 25px;
+  
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: flow-root;
+    border-radius: 20px;
+  
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ffff;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #F8F8F8;
+  }
+  .arrow {
+    color: #000;
+    position: absolute;
+    margin-top: -13px;
+    margin-left: 15px;
+    font-size: 32px;
+  }
+  
+  .content {
+    margin-left: 50%;
+  }
+</style>
+
+
+
+<div id="map"></div>
+
+<div class="vertical-menu">
+    <a href="mainpage.html"><img src="https://i.ibb.co/W3b7MMp/home-2.png" height="40px" width="40px"></a>
+
+    <a href="#" class="active"><img src="https://i.ibb.co/vPVJwnr/location-1.png" height="40px" width="40px"></a>
+    <a href="Booking1.html"><img src="https://i.ibb.co/df79MCP/calendar-7.png" height="40px" width="40px"></a>
+    <a href="events.html"><img src="https://i.ibb.co/CmTgB4z/event.png" height="40px" width="40px"></a>
+    <a href="Contacts1.html"><img src="https://i.ibb.co/Nty59Hz/phone-call-2.png" height="40px" width="40px"></a>
+    <a href="information.html"><img src="https://i.ibb.co/v4dgBjv/information-1.png" height="40px" width="40px"></a>
+    <a href="mainpage.html"><img src="https://i.ibb.co/sR87BV6/logout-3.png" height="40px" width="40px"></a>
+  </div>
+  <div class="maptext">
+    <p>MAP</p>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png" height="40px" width="40px">
+          <a class="arrow">ˬ</a>
+  </button>
+  <div class="dropdown-content">
+          <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/800px-Flag_of_Denmark.svg.png" height="40p" width="40px"></a>
+  </div>
+</div>
+</div>
+</div>
+<h3>This is the Map of the surrounding areas 
+    <br>that might help you get through
+    <br>the neighbourhood better
+    <br>and have better understanding
+    <br>of the fun in Aarhus O
+</h3>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for surroundings.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#">Gym</a></li>
+  <li><a href="#">Restaurants</a></li>
+
+  <li><a href="#">Attractions</a></li>
+  <li><a href="#">Shops</a></li>
+
+  <li><a href="#">Services</a></li>
+</ul>
+  
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoidHN2ZXR5ZHJhZ2Fub3ZhMjYiLCJhIjoiY2w5Z3E4cmR2MGk5MjNwazIybjZoMGw0diJ9.YzhvIFBDVZB0b7k2tQfOJg';
+    //56.16496/10.22414
+    const monument = [10.22414, 56.16496];
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/tsvetydraganova26/cl9gqeh2m006314mq8vkki4r9',
+        center: monument,
+        zoom: 15
+    });
+
+    // create the popup
+    const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        'Grundfos Kollegiet, Aarhus,.'
+    );
+
+    // create DOM element for the marker
+    const el = document.createElement('div');
+    el.id = 'marker';
+
+    // create the marker
+    new mapboxgl.Marker(el)
+        .setLngLat(monument)
+        .setPopup(popup) // sets a popup on this marker
+        .addTo(map);
+
+    
+        function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>

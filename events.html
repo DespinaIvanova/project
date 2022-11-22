@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grundfos Kollegiet</title>
+</head>
+<body>
+    
+    <style>
+
+        .vertical-menu {
+      width: 100px;
+      position: fixed;
+      align-self: center;
+    }
+
+    .vertical-menu a {
+      background-color: #F8F8F8;
+      color: black;
+      padding: 30px;
+      text-decoration: none;
+      float: right;
+      border-radius: 10px;
+    }
+
+
+    .vertical-menu a.active {
+      background-color: #ccc;
+      color: white;
+    }
+         
+        .eventstext {
+            text-align: center;
+            font-family: condor;
+            font-size: 60px;
+        }
+        
+        body {
+        background-image: url(https://i.pinimg.com/originals/42/48/48/4248488ae616711071e10656b179bced.jpg);
+        background-color: #cccccc;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height:auto;
+        max-width:100%;
+        border:none;
+        display:block;
+        } 
+        div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 380px;
+        position: relative;
+        left: 12%;
+        background-color: white;
+        }
+
+        div.gallery img {
+        width: 381px;
+        height: 350px;
+
+        }
+
+        div.desc {
+        padding: 15px;
+        text-align: center;
+        }
+
+        .dropbtn {
+    background-color: #F8F8F8;
+    color: #0000;
+    padding: 6px;
+    padding-right: 35px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+  }
+  
+  .dropdown {
+    position: relative; 
+    margin-top: 40px;
+    /* display: inline-block; */
+    margin-left: 90%;
+    /* margin-bottom: 100px; */
+    border-radius: 25px;
+  
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 81px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-left: 5px;
+    border-radius: 25px;
+  
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: flow-root;
+    border-radius: 20px;
+  
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ffff;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #F8F8F8;
+  }
+  .arrow {
+    color: #000;
+    position: absolute;
+    margin-top: -13px;
+    margin-left: 15px;
+    font-size: 32px;
+  }
+  
+  .content {
+    margin-left: 50%;
+  }
+
+
+
+
+        @media only screen and (max-width: 420px) {
+                /* For mobile: */
+        body{
+        background-image: url(https://i.pinimg.com/564x/bb/15/62/bb1562adfcead9b17651f177d42dd7f4.jpg);
+        background-color: #cccccc;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: fixed;
+        }
+        .vertical-menu {
+        width: 20px;
+        position: fixed;
+        align-self: center;
+        left: 10%;
+        top: 15%;
+
+        }
+
+        .vertical-menu a {
+        background-color: #F8F8F8;
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        float: right;
+        border-radius: 10px;
+        }
+
+
+        .vertical-menu a.active {
+        background-color: #ccc;
+        color: white;
+        }
+        div.gallery img{
+          width: 100px;
+          height: 100px;
+        }
+        div.desc{
+          font-size: 10px;
+          text-align: center;
+          padding: 10px;
+          
+          
+        }
+        .eventstext{
+          font-size: 30px;
+          margin-left: 30%;
+        }
+        div.gallery {
+        margin: 10px;
+        border: none;
+        float: center;
+        width: 100px;
+        height: 150px;
+        position: relative;
+        left: 30%;
+        background-color: white;
+        margin-left: 20%;
+        margin-top: 10%;
+        }
+        
+      }
+            
+        @media only screen and (min-width: 768px) {
+                /* For desktop: */
+               
+            }
+
+
+    </style>
+        <div class="vertical-menu">
+            <a href="mainpage.html"><img src="https://i.ibb.co/W3b7MMp/home-2.png" height="40px" width="40px"></a>
+        
+            <a href="map.html"><img src="https://i.ibb.co/vPVJwnr/location-1.png" height="40px" width="40px"></a>
+            <a href="Booking1.html"><img src="https://i.ibb.co/df79MCP/calendar-7.png" height="40px" width="40px"></a>
+            <a href="events.html" class="active"><img src="https://i.ibb.co/CmTgB4z/event.png" height="40px" width="40px"></a>
+            <a href="Contacts1.html"><img src="https://i.ibb.co/Nty59Hz/phone-call-2.png" height="40px" width="40px"></a>
+            <a href="information.html"><img src="https://i.ibb.co/v4dgBjv/information-1.png" height="40px" width="40px"></a>
+            <a href="mainpage.html"><img src="https://i.ibb.co/sR87BV6/logout-3.png" height="40px" width="40px"></a>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png" height="40px" width="40px">
+              <a class="arrow">ˬ</a>
+            </button>
+            <div class="dropdown-content">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/800px-Flag_of_Denmark.svg.png" height="40p" width="40px"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+          <div class="eventstext">
+            <p>EVENTS</p>
+        </div>
+          <div class="gallery">
+            <a target="_blank" href="event2.html">
+              <img src="https://i.pinimg.com/564x/df/64/83/df64839ea939c38de690d27253127a09.jpg" alt="Halloween Party" width="600" height="400">
+            </a>
+            <div class="desc">HALLOWEEN PARTY</div>
+          </div>
+          <div class="gallery">
+            <a target="_blank" href="event1.html">
+              <img src="https://i.pinimg.com/564x/3d/72/c7/3d72c7a6d7af0c838f9092adcde95540.jpg" alt="Pizza Party" width="600" height="400">
+            </a>
+            <div class="desc">PIZZA PARTY</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="event3.html">
+              <img src="https://i.pinimg.com/564x/6d/11/b3/6d11b32ad73dde106dd3de1c90aedb32.jpg" alt="Beer pong" width="600" height="400">
+            </a>
+            <div class="desc">BEER PONG</div>
+          </div>
+        
+        
+</body>
+</html>

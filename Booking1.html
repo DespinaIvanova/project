@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+                body {
+                        background-image: url(https://i.pinimg.com/originals/42/48/48/4248488ae616711071e10656b179bced.jpg);  
+                        background-color: #cccccc;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        height: 100%;
+                        max-width: 100%;
+                        border: none;
+                        display: block;
+                        overflow: hidden;
+                        position: fixed;
+                }
+
+                .shift {
+                        margin-left: 100px;
+                        text-align: center;
+                        height: 0;
+                        transition: height 0.66s ease-out;
+                        position: relative;
+                        position:absolute;
+                        text-align: justify;
+                        overflow: hidden;
+                }
+
+                
+
+                h1 {
+                        position: fixed;
+                        font-size: 50px;
+                        font-family: Condor;
+                        text-align: center;
+                        
+
+                }
+
+                .p {
+                        font-size: 200px;
+                }
+
+                .vertical-menu {
+                        width: 100px;
+                        position: fixed;
+                        bottom: 1%;
+
+                }
+
+                .vertical-menu a {
+                        background-color: #F8F8F8;
+                        color: black;
+                        padding: 30px;
+                        text-decoration: none;
+                        float: right;
+                        border-radius: 10px;
+                        
+                }
+
+               
+
+                .vertical-menu a.active {
+                        background-color: #ccc;
+                        color: white;
+                        
+                }
+
+                .dropbtn {
+                        background-color: #F8F8F8;
+                        color: #0000;
+                        padding: 6px;
+                        padding-right: 35px;
+                        font-size: 16px;
+                        border: none;
+                        border-radius: 25px;
+                        
+                }
+
+                .dropdown {
+                        /* position: relative; */
+                        margin-top: 40px;
+                        /* display: inline-block; */
+                        margin-left: 80%;
+                        /* margin-bottom: 100px; */
+                        border-radius: 25px;
+                        margin-left: 850px;
+
+                }
+
+                .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #f1f1f1;
+                        min-width: 81px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                        padding-left: 5px;
+                        border-radius: 25px;
+
+                }
+
+                .dropdown-content a {
+                        color: black;
+                        padding: 10px 10px;
+                        text-decoration: none;
+                        display: flow-root;
+                        border-radius: 20px;
+                       
+
+                }
+
+                .dropdown-content a:hover {
+                        background-color: #ffff;
+                }
+
+                .dropdown:hover .dropdown-content {
+                        display: block;
+                }
+
+                .dropdown:hover .dropbtn {
+                        background-color: #F8F8F8;
+                }
+
+                .arrow {
+                        color: #000;
+                        position: absolute;
+                        margin-top: -13px;
+                        margin-left: 15px;
+                        font-size: 32px;
+                }
+                .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+                .content {
+                        margin-left: 400px;
+                        margin-top: 5%;
+                        font-size: 25px ;
+                }
+
+                .flex-container {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        grid-column-gap: 40px 
+                        
+                        
+                    
+                       
+                }
+
+                .buttons{
+                        margin-right: 200px;
+                        margin-top: 200px;
+                        background-color: grey;
+                        font-size: 20px;
+                        padding: 10px 30px;
+                        border-radius: 50px;
+                        border-width: 1px;
+                }
+                        
+                 div.scrollmenu {
+                        background-color: grey;
+                        overflow: auto;
+                        white-space: nowrap;
+                        border-radius: 100px;
+                        margin-right: 100px;
+                        margin-left: 20%;
+
+                 }
+
+                        .flex-container {
+                         display: flex;
+                         flex-direction: row;
+                         flex-wrap: nowrap;
+                         background-color: lightgrey;
+                         width: 0px;
+                         margin-left: 450px;
+                         text-align: center;
+                         line-height: 75px;
+                         font-size: 30px;
+                         grid-area: auto;
+
+    
+
+                        }
+                
+
+                .flex-container {
+                         display: flex;
+                         flex-direction: row;
+                         flex-wrap: nowrap;
+                         background-color: lightgrey;
+                         width: 0px;
+                         margin-left: 500px;
+                         text-align: center;
+                         line-height: 75px;
+                         font-size: 30px;
+                         border-radius: 50px;
+                         
+                       
+
+             
+                }
+                .button1 {
+                        margin-left: 50%;
+                        margin-top: 20px;
+                        background-color: orange;
+                        font-size: 20px;
+                        padding: 10px 30px;
+                        border-radius: 50px;
+                        border-width: 1px;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+
+                
+
+        
+              
+  
+
+
+</style>
+
+
+</head>
+
+<div class="shift">
+        <div class="tittle">
+                <div class="flex-container">
+
+                        <h1>
+                                BOOK YOUR FACILITY
+
+                        </h1>
+
+                        <div class="dropdown">
+                                <button class="dropbtn">
+                                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png" height="40px" width="40px">
+                                        <a class="arrow">ˬ</a>
+                                </button>
+                                <div class="dropdown-content">
+                                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/800px-Flag_of_Denmark.svg.png" height="40p" width="40px"></a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+
+    
+    </div>
+    <div class="flex-container">
+  <div><button class="button">11:00</button></div> 
+  <div><button class="button">12:00</button></div>
+  <div><button class="button">13:00</button></div>
+  <div><button class="button">14:00</button></div>
+  <div><button class="button">15:00</button></div>
+  <div><button class="button">16:00</button></div>
+  <p><i class="arrow right" img="https://cdn-icons-png.flaticon.com/512/2985/2985161.png"></i></p>
+  <p><i class="arrow left" img="https://cdn-icons-png.flaticon.com/512/5436/5436598.png"></i></p>
+  </div>
+
+</div>
+
+  </div>
+
+
+</div>
+        </div>
+
+     
+        <div class="content">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FCopenhagen&showTz=0&showNav=0&showTitle=0&src=ZjY4ZDk4YmZmN2U2ZjBhODM1ZGY4NmFiYzRiZjUwMmY2ZmEwMThhYzI3ZjI3MmRkZTRmYmZiZjdhOTQwM2Q0MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+
+<div class="flex-container">
+        <div class="scrollmenu"></div>
+<div><button class="buttons">TV room</button></div> 
+<div><button class="buttons">Laundry room</button></div>
+<div><button class="buttons">Reading room</button></div>
+<div><button class="buttons">Table football</button></div>
+<div><button class="buttons">Table tennis</button></div>
+<div><button class="buttons">Common room</button></div>
+
+</div>
+</div>
+</div>
+
+<button class="button1">BOOK</button>
+
+</div>
+
+</div>
+        
+
+</div>
+
+<div class="vertical-menu">
+        <a href="mainpage.html"><img src="https://i.ibb.co/W3b7MMp/home-2.png" height="40px" width="40px"></a> 
+        <a href="map.html"><img src="https://i.ibb.co/vPVJwnr/location-1.png" height="40px" width="40px"></a>
+        <a href="#"class="active"><img src="https://i.ibb.co/df79MCP/calendar-7.png" height="40px" width="40px"></a>
+        <a href="events.html"><img src="https://i.ibb.co/CmTgB4z/event.png" height="40px" width="40px"></a>
+        <a href="Contacts1.html"><img src="https://i.ibb.co/Nty59Hz/phone-call-2.png" height="40px" width="40px">
+        <a href="information.html"><img src="https://i.ibb.co/v4dgBjv/information-1.png " height="40px" width="40px"></a>
+        <a href="mainpage.html"><img src="https://i.ibb.co/sR87BV6/logout-3.png" height="40px" width="40px"></a>
+</div>
+
+
+<script src="js.js"></script>
+
+</body>
+
+</html>
